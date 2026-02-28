@@ -1,0 +1,20 @@
+run = "cowsay Configure me!"
+entrypoint = "README.md"
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_11"
+packages = ["cowsay", "psmisc"]
+
+[agent]
+expertMode = true
+
+[[ports]]
+localPort = 3000
+
+[[ports]]
+localPort = 3001
+
+[[ports]]
+localPort = 3005
+externalPort = 80
